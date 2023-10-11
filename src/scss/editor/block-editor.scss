@@ -1,0 +1,18 @@
+// Tooltip Richtext formatter style.
+.has-tooltip[data-tooltip],
+.wp-block-image[data-tooltip-info] {
+	position: relative;
+	cursor: pointer;
+
+	&:not(.wp-block-image) {
+
+		display: inline-block;
+		border-bottom: 1px dotted #000;
+	}
+
+	&::before,
+	&::after {
+
+		display: none;
+	}
+}
