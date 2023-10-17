@@ -78,6 +78,16 @@
 
 	}
 
+
+	&.wp-block-image::before, 
+	&.wp-block-image::after {
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: fit-content;
+	}
+
 	@media (max-width: 767px) {
 
 		&::before {

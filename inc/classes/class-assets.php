@@ -91,7 +91,7 @@ class Assets {
 		$this->register_scripts();
 	    
 	    $cssName = '/build/scss/editor/block-editor.css';
-	    $jsName = '/build/block-editor.js';
+	    $jsName = '/build/index.js';
 
 	    if ( file_exists( GUTENBERG_TOOLTIP_PATH . $cssName ) ) {
 		    

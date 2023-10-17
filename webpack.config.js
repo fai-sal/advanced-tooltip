@@ -44,8 +44,7 @@ module.exports = ( _, argv ) => {
 			mode,
 			entry: {
 				...defaultConfig.entry(),
-				'block-editor':
-					path.resolve( __dirname, 'src' ) + '/formats/index.js',
+				'block-editor': path.resolve( __dirname, 'src' ) + '/index.js',
 				'front-end':
 					path.resolve( __dirname, 'src' ) +
 					'/frontend-scripts/index.js',
