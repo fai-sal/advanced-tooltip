@@ -7,7 +7,13 @@ Add Tooltip to Gutenberg RichText and Blocks
 - Run `npm run build` for production.
 - Run `npm run bundle` for exporting plugin zip file in the './dist'.
 
-## Screenshot
+## Screenshots
 
+### Editor
 ![editor](./assets/img/editor.png)
+
+### Frontend
+#### Richtext
 ![front-end](./assets/img/front-end.png)
+#### core/image block
+![front-end](./assets/img/img.png)
