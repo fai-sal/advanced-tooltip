@@ -9,4 +9,5 @@ Add Tooltip to Gutenberg RichText and Blocks
 
 ## Screenshot
 
-![tooltip-example](./assets/img/Tooltip%20example.png)
+![editor](./assets/img/editor.png)
+![front-end](./assets/img/front-end.png)
