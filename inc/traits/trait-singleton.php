@@ -22,7 +22,7 @@
  *
  * If you specifically need multiple objects, then use a normal class.
  *
- * @package guten-tooltip
+ * @package advanced-tooltip
  */
 
 namespace Guten\tooltip\Inc\Traits;

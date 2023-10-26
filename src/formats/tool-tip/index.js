@@ -13,7 +13,7 @@ const ToolTip = {
 	name,
 
 	settings: {
-		title: __( 'Tooltip', 'guten-tooltip' ),
+		title: __( 'Tooltip', 'advanced-tooltip' ),
 		tagName: 'span',
 		className: 'has-tooltip',
 		attributes: {

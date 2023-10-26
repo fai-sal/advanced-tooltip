@@ -74,7 +74,7 @@ const Tooltip = ( BlockEdit ) => {
 									style={ INPUTSTYLE }
 									label={ __(
 										'Tooltip Text',
-										'guten-tooltip'
+										'advanced-tooltip'
 									) }
 									value={ toolTipText }
 									onChange={ ( nextValue ) =>
@@ -91,7 +91,7 @@ const Tooltip = ( BlockEdit ) => {
 										onToggle();
 									} }
 								>
-									{ __( 'Add', 'guten-tooltip' ) }
+									{ __( 'Add', 'advanced-tooltip' ) }
 								</Button>
 							</div>
 						) }
@@ -104,7 +104,7 @@ const Tooltip = ( BlockEdit ) => {
 	};
 };
 
-addFilter( 'editor.BlockEdit', 'guten-tooltip', Tooltip );
+addFilter( 'editor.BlockEdit', 'advanced-tooltip', Tooltip );
 
 /**
  * Add additional attributes to core/image block.
@@ -127,7 +127,7 @@ function addAttribute( settings ) {
 	return settings;
 }
 
-addFilter( 'blocks.registerBlockType', 'guten-tooltip', addAttribute );
+addFilter( 'blocks.registerBlockType', 'advanced-tooltip', addAttribute );
 
 /**
  * Adding extra attributes to front-end.
@@ -155,7 +155,7 @@ const addToolTip = ( props, blockType, attributes ) => {
 
 	return props;
 };
-addFilter( 'blocks.getSaveContent.extraProps', 'guten-tooltip', addToolTip );
+addFilter( 'blocks.getSaveContent.extraProps', 'advanced-tooltip', addToolTip );
 
 /**
  * Adding Extra data-attibute to core/image block's editor.
@@ -181,4 +181,4 @@ const addTooltip = createHigherOrderComponent( ( BlockListBlock ) => {
 	};
 }, 'withTooltip' );
 
-wp.hooks.addFilter( 'editor.BlockListBlock', 'guten-tooltip', addTooltip );
+wp.hooks.addFilter( 'editor.BlockListBlock', 'advanced-tooltip', addTooltip );

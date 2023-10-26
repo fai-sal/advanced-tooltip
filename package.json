@@ -1,5 +1,5 @@
 {
-  "name": "gutenberg-tooltip",
+  "name": "advanced-tooltip",
   "version": "1.0.0",
   "description": "Plugin for blocks",
   "main": "src/blocks.js",

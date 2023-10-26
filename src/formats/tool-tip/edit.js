@@ -84,7 +84,7 @@ export default function ToolTip( { activeAttributes, value, onChange } ) {
 						>
 							<TextareaControl
 								style={ INPUTSTYLE }
-								label={ __( 'Tooltip Text', 'guten-tooltip' ) }
+								label={ __( 'Tooltip Text', 'advanced-tooltip' ) }
 								value={ toolTipText }
 								onChange={ ( nextValue ) =>
 									setToolTipText( nextValue ?? '' )
@@ -99,7 +99,7 @@ export default function ToolTip( { activeAttributes, value, onChange } ) {
 								} }
 								disabled={ toolTipData === toolTipText }
 							>
-								{ __( 'Add', 'guten-tooltip' ) }
+								{ __( 'Add', 'advanced-tooltip' ) }
 							</Button>
 						</div>
 					) }

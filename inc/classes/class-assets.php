@@ -2,7 +2,7 @@
 /**
  * Assets class.
  *
- * @package guten-tooltip
+ * @package advanced-tooltip
  */
 
 namespace Guten\tooltip\Inc;
@@ -47,9 +47,9 @@ class Assets {
 	
 	
 	public function register_scripts() {
-		wp_register_script("guten-tooltip-script", GUTENBERG_TOOLTIP_URL . '/build/front-end.js', array(), '1.0.0', true );
-		// wp_register_style("guten-tooltip-script", GUTENBERG_TOOLTIP_URL . '/build/front-end.js', array(), filemtime( GUTENBERG_TOOLTIP_PATH . '/build/front-end.js' ) );
-		wp_enqueue_script( 'guten-tooltip-script' );
+		wp_register_script("advanced-tooltip-script", ADVANCED_TOOLTIP_URL . '/build/front-end.js', array(), '1.0.0', true );
+		// wp_register_style("advanced-tooltip-script", ADVANCED_TOOLTIP_URL . '/build/front-end.js', array(), filemtime( ADVANCED_TOOLTIP_PATH . '/build/front-end.js' ) );
+		wp_enqueue_script( 'advanced-tooltip-script' );
 	}
 
 	/**
@@ -60,7 +60,7 @@ class Assets {
 	public function enqueue_assets() {
 		$this->register_scripts();
 		$this->localize_scripts();
-		wp_enqueue_style( 'guten-tooltip', GUTENBERG_TOOLTIP_URL . '/build/scss/front-end/main.css', array(), filemtime( GUTENBERG_TOOLTIP_PATH . '/build/scss/front-end/main.css' ) );
+		wp_enqueue_style( 'advanced-tooltip', ADVANCED_TOOLTIP_URL . '/build/scss/front-end/main.css', array(), filemtime( ADVANCED_TOOLTIP_PATH . '/build/scss/front-end/main.css' ) );
 	}
 
 	/**
@@ -68,14 +68,14 @@ class Assets {
 	 */
 	public function localize_scripts() {
 
-		$local_script_handle = 'guten-tooltip-local-object';
+		$local_script_handle = 'advanced-tooltip-local-object';
 		wp_register_script( $local_script_handle, '', array(), GUTEN_TOOLTIP_VERSION );
 		wp_localize_script(
 			$local_script_handle,
 			'tinyBlocks',
 			[
-				'url' => GUTENBERG_TOOLTIP_URL,
-				'images' => GUTENBERG_TOOLTIP_URL . '/images'
+				'url' => ADVANCED_TOOLTIP_URL,
+				'images' => ADVANCED_TOOLTIP_URL . '/images'
 			]
 		);
 		wp_enqueue_script( $local_script_handle );
@@ -93,25 +93,25 @@ class Assets {
 	    $cssName = '/build/scss/editor/block-editor.css';
 	    $jsName = '/build/index.js';
 
-	    if ( file_exists( GUTENBERG_TOOLTIP_PATH . $cssName ) ) {
+	    if ( file_exists( ADVANCED_TOOLTIP_PATH . $cssName ) ) {
 		    
 		    wp_register_style(
-			    'guten-tooltip-editor',
-			    GUTENBERG_TOOLTIP_URL . $cssName,
+			    'advanced-tooltip-editor',
+			    ADVANCED_TOOLTIP_URL . $cssName,
 			    [],
-			    filemtime(  GUTENBERG_TOOLTIP_PATH . $cssName  )
+			    filemtime(  ADVANCED_TOOLTIP_PATH . $cssName  )
 		    );
 		    
 	    }
 	    
-	    if ( file_exists( GUTENBERG_TOOLTIP_PATH . $jsName ) ) {
+	    if ( file_exists( ADVANCED_TOOLTIP_PATH . $jsName ) ) {
 		    
 		    $block_script_asset = [
 			    'dependencies' => [],
-			    'version'      => filemtime( GUTENBERG_TOOLTIP_PATH . $jsName ),
+			    'version'      => filemtime( ADVANCED_TOOLTIP_PATH . $jsName ),
 		    ];
 		    
-		    $assets_file = GUTENBERG_TOOLTIP_PATH . '/build/block-editor.asset.php';
+		    $assets_file = ADVANCED_TOOLTIP_PATH . '/build/block-editor.asset.php';
 		    
 		    if ( file_exists( $assets_file ) ) {
 			    $assets             = require( $assets_file );
@@ -122,16 +122,16 @@ class Assets {
 		    }
 		    
 		    wp_register_script(
-			    'guten-tooltip-editor',
-			    GUTENBERG_TOOLTIP_URL . $jsName,
+			    'advanced-tooltip-editor',
+			    ADVANCED_TOOLTIP_URL . $jsName,
 			    $block_script_asset['dependencies'],
 			    $block_script_asset['version'],
 			    true
 		    );
 	    }
 	    
-	    wp_enqueue_script( 'guten-tooltip-editor' );
-	    wp_enqueue_style( 'guten-tooltip-editor' );
+	    wp_enqueue_script( 'advanced-tooltip-editor' );
+	    wp_enqueue_style( 'advanced-tooltip-editor' );
     }
 
 }

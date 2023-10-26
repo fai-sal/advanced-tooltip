@@ -2,7 +2,7 @@
 /**
  * Autoloader file for plugin.
  *
- * @package guten-tooltip-featuers
+ * @package advanced-tooltip-featuers
  */
 
 namespace Guten\tooltip\Inc\Helpers;
@@ -70,7 +70,7 @@ function autoloader( $resource = '' ) {
 				break;
 		}
 
-		$resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( GUTENBERG_TOOLTIP_PATH ), $directory, $file_name );
+		$resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( ADVANCED_TOOLTIP_PATH ), $directory, $file_name );
 
 	}
 

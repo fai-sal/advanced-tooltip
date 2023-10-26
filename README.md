@@ -1,4 +1,4 @@
-# Gutenberg Tooltip
+# Guten Tooltip
 Add Tooltip to Gutenberg RichText and Blocks
 ## Scripts
 

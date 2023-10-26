@@ -2,7 +2,7 @@
 /**
  * Plugin manifest class.
  *
- * @package guten-tooltip
+ * @package advanced-tooltip
  */
 
 namespace Guten\tooltip\Inc;
